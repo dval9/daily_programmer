@@ -10,7 +10,7 @@ namespace problems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(ProjectEuler.Problem10());
+            Console.WriteLine(ProjectEuler.Problem11());
             
             
             Console.ReadLine();
