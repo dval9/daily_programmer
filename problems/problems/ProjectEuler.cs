@@ -329,7 +329,26 @@ namespace problems
             return max_product;
         }
 
+        /// <summary>
+        /// What is the value of the first triangle number to have over five hundred divisors?
+        /// </summary>
+        /// <returns>Long.</returns>
+        public static long Problem12()
+        {
+            for (int i = 1; i < 500 * 500; i++)
+            {
+                int divisors = 2;
+                int triangle = i * (i + 1) / 2;
+                for (int j = 2; j <= Math.Sqrt(triangle); j++)
+                    if (triangle % j == 0)
+                        divisors += 2;
 
+                if (divisors > 500)
+                    return triangle;
+            }
+
+            return 0;
+        }
 
 
 
